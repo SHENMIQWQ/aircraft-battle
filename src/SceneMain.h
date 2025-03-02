@@ -17,12 +17,13 @@ public:
     void on_update() override;
     void on_render() override;
     void on_input(SDL_Event* event) override;
-    
+
     void on_exit() override;
 
 private:
     Player player;
     Game &game;
+   
 };
 
 

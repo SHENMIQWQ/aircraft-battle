@@ -9,6 +9,8 @@ struct Player
     SDL_FPoint position = {0, 0};
     int width = 0;
     int height = 0;
+    bool left_key_down = false, right_key_down = false, up_key_down = false, down_key_down = false;
+    int SPEED = 2;
 };
 
 #endif // OBJECT_H

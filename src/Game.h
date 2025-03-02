@@ -10,7 +10,7 @@ public:
     Game();
     ~Game();
 
-    static Game *instance();
+    static Game* instance();
     void run();
     void on_render();
     void on_input(SDL_Event* event);
