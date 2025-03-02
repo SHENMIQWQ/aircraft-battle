@@ -50,7 +50,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLshook-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLshook-Windows-Debug-5fc8f899302edc733af7.json",
+					"jsonFile" : "target-SDLshook-Windows-Debug-4cf88eabc935c13f0cd7.json",
 					"name" : "SDLshook-Windows",
 					"projectIndex" : 0
 				},
@@ -112,7 +112,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLshook-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLshook-Windows-Release-ecac12c3b41362d84d60.json",
+					"jsonFile" : "target-SDLshook-Windows-Release-ade0c6c87d3e7e36c6c5.json",
 					"name" : "SDLshook-Windows",
 					"projectIndex" : 0
 				},
@@ -174,7 +174,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLshook-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLshook-Windows-MinSizeRel-a86c4b64420ae85382df.json",
+					"jsonFile" : "target-SDLshook-Windows-MinSizeRel-ea116f0fdc46324eb741.json",
 					"name" : "SDLshook-Windows",
 					"projectIndex" : 0
 				},
@@ -236,7 +236,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SDLshook-Windows::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDLshook-Windows-RelWithDebInfo-8ef25d0968c9a105c303.json",
+					"jsonFile" : "target-SDLshook-Windows-RelWithDebInfo-1f2e8623745113924976.json",
 					"name" : "SDLshook-Windows",
 					"projectIndex" : 0
 				},

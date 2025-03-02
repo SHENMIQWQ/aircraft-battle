@@ -12,7 +12,7 @@ public:
     virtual void on_update() = 0;
     virtual void on_render() = 0;
     virtual void on_exit() = 0;
-    virtual void handleEvent(SDL_Event* event) = 0;
+    virtual void on_input(SDL_Event* event) = 0;
 };
 
 #endif // SCENE_H

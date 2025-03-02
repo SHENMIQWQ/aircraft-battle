@@ -29,6 +29,7 @@ add_executable(${TARGET}
                "src/main.cpp"
                "src/Game.cpp"
                "src/SceneMain.cpp"
+               "src/Object.h"
             )
 
 #链接库
