@@ -14,7 +14,7 @@ public:
     ~SceneMain();
 
     void on_enter() override;
-    void on_update() override;
+    void on_update(float delta) override;
     void on_render() override;
     void on_input(SDL_Event* event) override;
 

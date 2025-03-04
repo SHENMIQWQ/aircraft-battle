@@ -3,6 +3,9 @@
 #include <SDL_mixer.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+using namespace std::chrono;
+const nanoseconds frame_duration(1000000000 / 144);
+steady_clock::time_point last_tick = steady_clock::now();
 
 Game::Game()
 {
@@ -30,8 +33,17 @@ void Game::run()
     {
         SDL_Event event;
         on_input(&event);
-        on_update();
+
+        steady_clock::time_point frame_start = steady_clock::now();
+        duration<float> delta = duration<float>(frame_start - last_tick);
+
+        on_update(delta.count());
         on_render();
+
+        last_tick = frame_start;
+        nanoseconds sleep_duration = frame_duration - (steady_clock::now() - frame_start);
+        if (sleep_duration > nanoseconds(0))
+	        std::this_thread::sleep_for(sleep_duration);
        
     }
 }
@@ -55,9 +67,9 @@ void Game::on_input(SDL_Event* event)
     }
 }
 
-void Game::on_update()
+void Game::on_update(float delta)
 {
-    currentScene->on_update();
+    currentScene->on_update(delta);
 }
 
 void Game::on_enter()
@@ -96,13 +108,12 @@ void Game::on_exit()
 {
 
 
-
+    
     if(currentScene != nullptr)
     {
         currentScene->on_exit();
         delete currentScene;
     }
-    IMG_Quit();
 
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);

@@ -5,6 +5,7 @@
 #include <SDL_ttf.h>
 #include "Game.h"
 
+
 int main(int, char**) {
     Game* game = Game::instance();
     game->on_enter();

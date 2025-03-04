@@ -12,13 +12,13 @@ SceneMain::~SceneMain()
 {
 }
 
-void SceneMain::on_update()
+void SceneMain::on_update(float delta)
 {
     int move_x =  player.right_key_down - player.left_key_down;
     int move_y =  player.down_key_down - player.up_key_down;
     float t = (float)sqrt(move_x*move_x + move_y*move_y);
-    player.position.x += move_x ? move_x / t * player.SPEED : 0;
-    player.position.y += move_y ? move_y / t * player.SPEED : 0;
+    player.position.x += move_x ? move_x / t * player.SPEED * delta : 0;
+    player.position.y += move_y ? move_y / t * player.SPEED * delta : 0;
   
     //边界处理
     if(player.position.x < 0) player.position.x = 0;
